@@ -1,0 +1,12 @@
+{
+  "name": "css-grid",
+  "version": "1.0.0",
+  "description": "I wanted to learn how to use CSS grid to make more optimal layouts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jon Hernandez <pgr.gni.20@gmail.com>",
+  "license": "ISC"
+}
