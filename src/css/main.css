@@ -15,7 +15,8 @@
     --secundary: #f9f9f9;
     --back: #051b24;
     --greenSecond:#1d4747;
-    --gray: #b7b3b4
+    --gray: #b7b3b4;
+    --link: #00a2ff;
 }
 
 li {
@@ -33,6 +34,15 @@ header {
     grid-template-rows: auto;
     grid-template-columns: 1fr auto;
     align-items: center
+}
+
+main {
+    display: grid;
+
+    grid-template-columns: repeat(12,85px);
+    justify-content: center;
+    grid-gap: 8px;
+
 }
 
 .container__tittle {
@@ -77,4 +87,33 @@ header {
 .nav__items li:hover{
     cursor: pointer;
     color: var(--gray);
+}
+
+/* Body */
+
+.container__information {
+    height: auto;
+    width: auto;
+
+    margin: 40px 0;
+    text-align: center;
+
+
+    grid-column: 1/13;
+}
+
+.container__information p:first-child {
+    color: var(--back);
+
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+}
+
+.information__span {
+    color: var(--link);
+}
+
+.information__span:hover {
+    cursor: pointer;
 }
