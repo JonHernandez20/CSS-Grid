@@ -41,7 +41,6 @@ main {
 
     display: grid;
 
-    /* grid-template-columns: repeat(12,1fr); */
     justify-content: center;
     grid-gap: 8px;
 
@@ -123,4 +122,101 @@ main {
 
 .information__span:hover {
     cursor: pointer;
+}
+
+/* CARDS */
+
+.information__cards {
+    grid-column: 1/13;
+    margin: 40px 0 0;
+
+    display: grid;
+
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.information__cards div {
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px;
+}
+
+.information__cards div figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.information__cards div figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.cards__maserati {
+    position: relative;
+    overflow: hidden;
+}
+
+.cards__maserati:hover::after {
+    transform: translate(350px);
+}
+
+.cards__maserati::after {
+    height: 300px;
+    width: 200px;
+    content: "";
+    background: url("../public/img/maserati.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform .2s;
+}
+
+.cards__ferrari {
+    position: relative;
+    overflow: hidden;
+}
+
+.cards__ferrari:hover::after {
+    transform: translate(350px);
+}
+
+.cards__ferrari::after {
+    height: 300px;
+    width: 200px;
+    content: "";
+    background: url("../public/img/ferrari.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform .2s;
+}
+
+.cards__lamborghini {
+    position: relative;
+    overflow: hidden;
+}
+
+.cards__lamborghini:hover::after {
+    transform: translate(350px);
+}
+
+.cards__lamborghini::after {
+    height: 300px;
+    width: 200px;
+    content: "";
+    background: url("../public/img/lamborghini.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: transform .2s;
 }
