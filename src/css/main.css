@@ -220,3 +220,42 @@ main {
     background-position: center;
     transition: transform .2s;
 }
+
+/* contacto */
+
+.container__contact {
+    height: auto;
+    width: 80vw;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(12,auto);
+
+    justify-content: center;
+}
+
+.contact__brands p:first-child {
+    color: var(--back);
+
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+}
+
+.contact__brands p:last-child {
+    width: 50vw;
+}
+
+.brands__gmail {
+    border-bottom: 1px solid var(--primary);
+    font-weight: lighter;
+}
+
+.brands__gmail:hover {
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.brands__number {
+    font-weight: bold;
+}
