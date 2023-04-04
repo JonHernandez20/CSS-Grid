@@ -313,3 +313,78 @@ main {
 .images__car p:last-child {
     color: var(--greenSecond);
 }
+
+/* Login */
+
+.container__login {
+    height: auto;
+    width: 80vw;
+    margin: 40px 0;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(12,auto);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container__login p:nth-child(1) {
+    grid-column: 1/13;
+    color: var(--back);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.login__inputs{
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-gap: 12px;
+}
+
+.login__inputs input {
+    padding: 4px;
+    font-size: 18px;
+
+    border: none;
+    border-bottom: 1px solid var(--primary);
+}
+
+.login__inputs button {
+    padding: 4px;
+    font-size: 18px;
+    transition: all 1s;
+}
+
+.inputs__p {
+    text-align: left;
+    font-size: 14px;
+    margin: 0;
+    width: 15vw;
+}
+
+.inputs__p:hover {
+    color: var(--link);
+    cursor: pointer;
+}
+
+.login__inputs button {
+    cursor: pointer;
+    background: var(--primary);
+
+    border-radius: 10px;
+    border: none;
+    color: var(--secundary);
+    transition: background .5s;
+}
+
+.login__inputs button:hover {
+    background: var(--greenSecond);
+}
+
+.login__inputs input:focus {
+    outline: none;
+    border-radius: 10px;
+}
