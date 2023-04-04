@@ -259,3 +259,57 @@ main {
 .brands__number {
     font-weight: bold;
 }
+
+/* Gallery */
+
+.container__gallery {
+    height: auto;
+    width: 80vw;
+    margin-top: 40px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+
+    justify-content: center;
+}
+
+.gallery__tittle,
+.gallery__images {
+    grid-column: 1/13;
+}
+
+.gallery__tittle p {
+    color: var(--back);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.gallery__images {
+    display: grid;
+    width: 100vw;
+    height: auto;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.gallery__images div {
+    margin: 12px 0;
+    width: 50vw;
+}
+
+.images__car img {
+    width: 400px;
+    height: 200px;
+}
+
+.images__car p:nth-child(2) {
+    font-weight: bold;
+}
+
+.images__car p:last-child {
+    color: var(--greenSecond);
+}
