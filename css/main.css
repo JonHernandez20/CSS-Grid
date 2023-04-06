@@ -1,0 +1,486 @@
+* {
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables de colores */
+
+:root {
+    --primary: #00000c;
+    --secundary: #f9f9f9;
+    --back: #051b24;
+    --greenSecond:#1d4747;
+    --gray: #b7b3b4;
+    --link: #00a2ff;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--secundary);
+
+    width: 100%;
+    height: 100px;
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr auto;
+    align-items: center
+}
+
+main {
+    width: 100%;
+
+    display: grid;
+
+    justify-content: center;
+    grid-gap: 8px;
+
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--primary);
+
+    display: grid;
+
+    justify-content: center;
+    grid-gap: 8px;
+}
+
+.container__tittle {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 120px 1fr;
+
+    align-items: center;
+
+    margin-left: 12px;
+}
+
+.container__img {
+    width: 100px;
+    height: 100px;
+
+}
+
+.container__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.container__nav {
+    width: 320px;
+    margin-right: 12px;
+}
+
+.nav__items {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    justify-items: center;
+}
+
+.nav__items li {
+    padding: 4px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.nav__items li:hover{
+    cursor: pointer;
+    color: var(--gray);
+}
+
+/* Body */
+
+.container__information {
+    height: auto;
+    width: 80vw;
+    margin: 40px 0;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(12,auto);
+
+    justify-content: center;
+
+}
+
+.container__information p:first-child {
+    color: var(--back);
+
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+}
+
+.information__acercaDe {
+    grid-column: 1/13;
+}
+
+.information__span {
+    color: var(--link);
+}
+
+.information__span:hover {
+    cursor: pointer;
+}
+
+/* CARDS */
+
+.information__cards {
+    grid-column: 1/13;
+    margin: 40px 0 0;
+
+    display: grid;
+
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.information__cards div {
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px;
+}
+
+.information__cards div figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.information__cards div figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.cards__maserati {
+    position: relative;
+    overflow: hidden;
+}
+
+.cards__maserati:hover::after {
+    transform: translate(350px);
+}
+
+.cards__maserati::after {
+    height: 300px;
+    width: 200px;
+    content: "";
+    background: url("../public/img/maserati.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform .2s;
+}
+
+.cards__ferrari {
+    position: relative;
+    overflow: hidden;
+}
+
+.cards__ferrari:hover::after {
+    transform: translate(350px);
+}
+
+.cards__ferrari::after {
+    height: 300px;
+    width: 200px;
+    content: "";
+    background: url("../public/img/ferrari.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform .2s;
+}
+
+.cards__lamborghini {
+    position: relative;
+    overflow: hidden;
+}
+
+.cards__lamborghini:hover::after {
+    transform: translate(350px);
+}
+
+.cards__lamborghini::after {
+    height: 300px;
+    width: 200px;
+    content: "";
+    background: url("../public/img/lamborghini.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: transform .2s;
+}
+
+/* contacto */
+
+.container__contact {
+    height: auto;
+    width: 80vw;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(12,auto);
+
+    justify-content: center;
+}
+
+.contact__brands p:first-child {
+    color: var(--back);
+
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+}
+
+.contact__brands p:last-child {
+    width: 50vw;
+}
+
+.brands__gmail {
+    border-bottom: 1px solid var(--primary);
+    font-weight: lighter;
+}
+
+.brands__gmail:hover {
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.brands__number {
+    font-weight: bold;
+}
+
+/* Gallery */
+
+.container__gallery {
+    height: auto;
+    width: 80vw;
+    margin-top: 40px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+
+    justify-content: center;
+}
+
+.gallery__tittle,
+.gallery__images {
+    grid-column: 1/13;
+}
+
+.gallery__tittle p {
+    color: var(--back);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.gallery__images {
+    display: grid;
+    width: 80vw;
+    height: auto;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.gallery__images div {
+    margin: 12px 0;
+    width: 50vw;
+}
+
+.images__car img {
+    width: 400px;
+    height: 200px;
+}
+
+.images__car p:nth-child(2) {
+    font-weight: bold;
+}
+
+.images__car p:last-child {
+    color: var(--greenSecond);
+}
+
+/* Login */
+
+.container__login {
+    height: auto;
+    width: 80vw;
+    margin: 40px 0;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(12,auto);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container__login p:nth-child(1) {
+    grid-column: 1/13;
+    color: var(--back);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.login__inputs{
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-gap: 12px;
+}
+
+.login__inputs input {
+    padding: 4px;
+    font-size: 18px;
+
+    border: none;
+    border-bottom: 1px solid var(--primary);
+}
+
+.login__inputs button {
+    padding: 4px;
+    font-size: 18px;
+    transition: all 1s;
+}
+
+.inputs__p {
+    text-align: left;
+    font-size: 14px;
+    margin: 0;
+    width: 15vw;
+}
+
+.inputs__p:hover {
+    color: var(--link);
+    cursor: pointer;
+}
+
+.login__inputs button {
+    cursor: pointer;
+    background: var(--primary);
+
+    border-radius: 10px;
+    border: none;
+    color: var(--secundary);
+    transition: background .5s;
+}
+
+.login__inputs button:hover {
+    background: var(--greenSecond);
+}
+
+.login__inputs input:focus {
+    outline: none;
+    border-radius: 10px;
+}
+
+/* Footer */
+
+.container__info {
+    height: auto;
+    width: 80vw;
+    margin: 40px 0;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container__footer p {
+    font-size: 2rem;
+    color: var(--gray);
+}
+
+.container__footer {
+    grid-column: 1/5;
+    display: flex;
+    align-items: center;
+}
+
+.container__footer img{
+    width: 100px;
+    height: 100px;
+}
+
+.container__links {
+    grid-column: 10/13;
+}
+
+.container__links ul {
+    display: grid;
+    grid-gap: 4px;
+}
+
+.container__links ul li a{
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.container__links ul li a:hover {
+    color: var(--secundary);
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+    /* HEADER */
+    .container__nav {
+        display: none;
+    }
+
+    .container__tittle {
+        margin: 0 auto;
+    }
+
+    /* MAIN */  
+    .container__information {
+        grid-template-columns: 1fr;
+    }
+
+    .information__cards {
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 16px;
+        justify-content: center;
+    }
+
+    .gallery__images {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .gallery__images div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
