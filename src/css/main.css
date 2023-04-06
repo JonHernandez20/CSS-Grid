@@ -299,7 +299,7 @@ footer {
 
 .gallery__images {
     display: grid;
-    width: 100vw;
+    width: 80vw;
     height: auto;
 
     grid-template-columns: repeat(2, 1fr);
@@ -448,4 +448,39 @@ footer {
 
 .container__links ul li a:hover {
     color: var(--secundary);
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+    /* HEADER */
+    .container__nav {
+        display: none;
+    }
+
+    .container__tittle {
+        margin: 0 auto;
+    }
+
+    /* MAIN */  
+    .container__information {
+        grid-template-columns: 1fr;
+    }
+
+    .information__cards {
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 16px;
+        justify-content: center;
+    }
+
+    .gallery__images {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .gallery__images div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
